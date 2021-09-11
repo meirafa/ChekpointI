@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Links boostrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Polaroid Geneator</title>
+  <link rel="shortcut icon" href="./assets/logo.svg">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <nav>
+        <a href="#"><img src="./assets/logo.svg" alt="Logo Polaroid Geneator"></a>
+        <a href="#">Gerador</a>
+        <a href="#album">Meu album</a>
+      </nav>
+      <div class="row d-flex align-items-center">
+        <div class="col">
+          <div class="boxWhite">
+            <form>
+              <p>Gere memórias, espalhe sentimentos!</p>
+              <input type="text" name="subtitle" id="subtitle" placeholder="Insira sua legenda aqui" maxlenght="120">
+              <input type="date" name="date" id="date" placeholder="Insira a data aqui">
+              <input type="text" name="urlImage" id="urlImage" placeholder="Insira a url da sua imagem aqui">
+            </form>
+            <button id="create" type="submit">Gerar polaroid!</button>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="content">
+            <button type="button" id="buttonAlbum">Adicionar ao album!</button>
+            <div class="polaroidCard">
+              <div class="backgroundCard">
+                <div class="imgCard">
+                </div>
+                <div class="polaroidContent">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="album py-5 bg-light">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="album">
+
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
