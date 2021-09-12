@@ -28,28 +28,36 @@
 
 <body>
   <main>
-    <div class="container">
-      <nav>
-        <a href="#"><img src="./assets/logo.svg" alt="Logo Polaroid Geneator"></a>
-        <a href="#">Gerador</a>
-        <a href="#album">Meu album</a>
+    <div class="container py-4 mb-2">
+      <nav class="nav justify-content-center">
+        <a class="d-flex align-items-center mb-2" href="#"><img src="./assets/logo.svg"
+            alt="Logo Polaroid Geneator"></a>
+        <ul class="nav ml-4">
+          <li><a class="nav-link" href="#">Gerador</a></li>
+          <li><a class="nav-link" href="#album">Meu album</a></li>
+        </ul>
       </nav>
-      <div class="row d-flex align-items-center">
-        <div class="col">
+    </div>
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col my-4">
           <div class="boxWhite">
             <form>
-              <p>Gere memórias, espalhe sentimentos!</p>
+              <p>Gere memórias, espalhe sentimentos! &#x2665;</p>
               <input type="text" name="subtitle" id="subtitle" placeholder="Insira sua legenda aqui" maxlenght="120">
               <input type="date" name="date" id="date" placeholder="Insira a data aqui">
               <input type="text" name="urlImage" id="urlImage" placeholder="Insira a url da sua imagem aqui">
             </form>
-            <button id="create" type="submit">Gerar polaroid!</button>
+            <div class="buttons container-sm text-center">
+              <button type="submit" id="create">&#9825; Gerar Polaroid!</button>
+              <button type="button" id="buttonAlbum">&#9734; Adicionar ao Album!</button>
+            </div>
           </div>
         </div>
 
-        <div class="col">
+        <div class="col mt-3">
           <div class="content">
-            <button type="button" id="buttonAlbum">Adicionar ao album!</button>
+
             <div class="polaroidCard">
               <div class="backgroundCard">
                 <div class="imgCard">
@@ -64,9 +72,9 @@
     </div>
 
     <div class="container">
-      <div class="album py-5 bg-light">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="album">
-
+      <div class="py-5 album justify-content-center">
+        <h1 class="text-center">&#8902;~ Album ~&#8902;</h1>
+        <div class="row pt-sm-5" id="album">
         </div>
       </div>
     </div>

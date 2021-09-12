@@ -19,13 +19,14 @@ html {
   --mustard: #fdca28;
   --yellow: #ffec3c;
   --green: #89c447;
-  font-size: 62.5% /* 10px */;
+  font-size: 65%;
   color: var(--brown);
 }
 
 body {
   background-color: var(--grey);
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -33,7 +34,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   max-width: 34.6rem;
-  margin-left: 12.4rem;
   margin-top: 3.1rem;
   font-size: 1.8rem;
   font-weight: 500;
@@ -55,6 +55,7 @@ nav a:hover {
 }
 
 .boxWhite {
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,10 +71,10 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--brown);
 }
 
 form p {
-  margin-top: 3rem;
   font-size: 1.8rem;
   text-align: center;
   font-weight: 500;
@@ -99,21 +100,43 @@ form input:focus {
   outline: none;
 }
 
+.buttons {
+  margin-top: 2rem;
+}
+
 button {
-  font-size: 1.8rem;
-  min-width: 50%;
-  height: 4.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  min-width: 40%;
+  padding: 1rem;
+  margin: 5px;
   border-radius: 1rem;
-  background-color: var(--blue);
-  margin: 3rem auto;
+  border-color: var(--mustard);
+  box-shadow: 0 0 40px 40px var(--mustard) inset, 0 0 0 0 var(--mustard);
+  transition: all 150ms ease-in-out;
+  color: var(--black);
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 0 0 10px 0 var(--mustard) inset, 0 0 10px 4px var(--mustard);
+}
+
+#buttonAlbum {
+  border-color: var(--pink);
+  box-shadow: 0 0 40px 40px var(--pink) inset, 0 0 0 0 var(--pink);
+}
+
+#buttonAlbum:hover{
+  box-shadow: 0 0 10px 0 var(--pink) inset, 0 0 10px 4px var(--pink);
 }
 
 .polaroidCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 38rem;
-  height: 46.2rem;
+  width: 24rem;
+  height: 32.2rem;
   background-color: var(--white);
   box-shadow: 24px 12px 50px rgba(0, 0, 0, 0.25);
 }
@@ -125,44 +148,60 @@ button {
 .imgCard {
   margin-top: 1.85rem;
   background-color: var(--black);
-  width: 34rem;
-  height: 34rem;
+  width: 20rem;
+  height: 20rem;
 }
 
 .polaroidImage {
-  width: 34rem;
-  height: 34rem;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
 }
 
 .polaroidContent {
   display: flex;
   margin-top: 1rem;
-  max-width: 34rem;
+  max-width: 20rem;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.8rem;
-  font-weight: 600;
   color: var(--black);
 }
 
 .polaroidSubtitle {
   width: 70%;
+  font-size: 1.4rem;
+  font-weight: bolder;
   word-wrap: break-word;
 }
 
 .polaroidDate {
-  font-size: 1.8rem;
-  font-weight: 600;
+  width: 100px;
+  font-size: 1.4rem;
+  font-weight: bolder;
   text-align: right;
   color: var(--black);
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 0 1 auto;
-  flex-basis: 100%;
-  max-width: 100%;
-  max-height: max-content;
+.album h1{
+  color: var(--brown);
+}
+@media (min-width: 768px) {
+  .polaroidCard {
+    width: 38rem;
+    height: 46.2rem;
+  }
+
+  .imgCard {
+    width: 34rem;
+    height: 34rem;
+  }
+
+  .polaroidImage {
+    width: 34rem;
+    height: 34rem;
+  }
+
+  .polaroidContent {
+    max-width: 34rem;
+  }
 }
